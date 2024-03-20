@@ -41,7 +41,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 ```hcl
 module "dns_zone" {
   depends_on                   = [module.resource_group, module.vnet]
-  source                       = "../.."
+  source                       = "https://github.com/slovink/terraform-azure-dns.git?ref=1.0.0"
   name                         = local.name
   environment                  = local.environment
   resource_group_name          = module.resource_group.resource_group_name
@@ -89,11 +89,11 @@ Replace **MIT** and **slovink** with the appropriate license and your informatio
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version  |
-|------|----------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.7.4  |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.7.4 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >=3.87.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0    |
+| <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0 |
 
 ## Providers
 
