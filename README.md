@@ -1,6 +1,24 @@
-# Terraform-azure-dns
 
-# Terraform Azure Cloud Dns Module
+<p align="center"> <img src="https://user-images.githubusercontent.com/50652676/62349836-882fef80-b51e-11e9-99e3-7b974309c7e3.png" width="100" height="100"></p>
+
+
+<h1 align="center">
+    Terraform Azure Resource-group
+</h1>
+
+<p align="center" style="font-size: 1.2rem;">
+    Terraform module to create Resource-group resource on Azure.
+     </p>
+
+<p align="center">
+
+<a href="https://www.terraform.io">
+  <img src="https://img.shields.io/badge/Terraform-v1.7.4-green" alt="Terraform">
+</a>
+<a href="https://github.com/slovink/terraform-azure-resource-group/blob/master/LICENSE">
+  <img src="https://img.shields.io/badge/License-APACHE-blue.svg" alt="Licence">
+</a>
+
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -71,11 +89,11 @@ Replace **MIT** and **slovink** with the appropriate license and your informatio
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.6.6 |
+| Name | Version  |
+|------|----------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.7.4  |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >=3.87.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0    |
 
 ## Providers
 

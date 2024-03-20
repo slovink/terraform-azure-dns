@@ -1,0 +1,72 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name : Terraform AZURE DNS
+
+# License of this project
+license: "MIT"
+
+# Canonical GitHub repo
+github_repo: git@github.com:slovink/terraform-azure-dns.git
+
+# Badges to display
+badges:
+  - name: "Terraform"
+    image: "https://img.shields.io/badge/Terraform-v1.7.4-green"
+    url: "https://www.terraform.io"
+  - name: "Licence"
+    image: "https://img.shields.io/badge/License-MIT-blue.svg"
+    url: "https://github.com/slovink/terraform-azure-dns/blob/master/LICENSE"
+
+#  description of this project
+description: |-
+  Terraform module to create Azure dns service resource on AZURE.
+# extra content
+include:
+  - "terraform.md"
+
+# How to use this project
+# How to use this project
+usage: |-
+  Here are some examples of how you can use this module in your inventory structure:
+  ### azure labels
+  ```hcl
+    # Basic
+  module "dns_zone" {
+  depends_on                   = [module.resource_group, module.vnet]
+  source                       = "../.."
+  name                         = local.name
+  environment                  = local.environment
+  resource_group_name          = module.resource_group.resource_group_name
+  dns_zone_names               = "example0000.com"
+  private_registration_enabled = true
+  private_dns                  = true
+  private_dns_zone_name        = "webserver0000.com"
+  virtual_network_id           = module.vnet.id
+  a_records = [{
+    name    = "test"
+    ttl     = 3600
+    records = ["10.0.180.17", "10.0.180.18"]
+    },
+    {
+      name    = "test2"
+      ttl     = 3600
+      records = ["10.0.180.17", "10.0.180.18"]
+  }]
+
+  cname_records = [{
+    name   = "test1"
+    ttl    = 3600
+    record = "example.com"
+  }]
+
+  ns_records = [{
+    name    = "test2"
+    ttl     = 3600
+    records = ["ns1.example.com.", "ns2.example.com."]
+  }]
+}
